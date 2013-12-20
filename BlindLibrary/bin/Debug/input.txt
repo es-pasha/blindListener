@@ -1,0 +1,14 @@
+[
+	{
+		"title":"title1",
+		"method":"Test",
+		"sound":"0.wav",
+		"subMenu":[
+			{"title":"subtitle1",
+			"method":"Test",
+			"sound":"0.wav",
+			"subMenu":[]
+			}
+		]
+	}
+]

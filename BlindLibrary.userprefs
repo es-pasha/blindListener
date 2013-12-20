@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlindLibrary\Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlindLibrary/Menu.cs">
     <Files>
-      <File FileName="BlindLibrary\Program.cs" Line="20" Column="18" />
-      <File FileName="BlindLibrary\Menu.cs" Line="21" Column="12" />
+      <File FileName="BlindLibrary/Menu.cs" Line="60" Column="13" />
+      <File FileName="BlindLibrary/Interfaces/IMenu.cs" Line="21" Column="1" />
+      <File FileName="BlindLibrary/Program.cs" Line="35" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
