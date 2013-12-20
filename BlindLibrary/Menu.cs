@@ -5,28 +5,33 @@ using System.Media;
 
 namespace BlindLibrary
 {
-	public class Menu
+	public class Menu : IMenu
 	{
-		public List<ItemMenu> menu;
-		public List<ItemMenu> parent;
+		public List<MenuItem> menu;
+		public List<MenuItem> parent;
 
 		public Menu()
 		{
-			menu = new List<ItemMenu> ();
+			menu = new List<MenuItem> ();
 		}
 
-		public Menu(List<ItemMenu> _menu, List<ItemMenu> _parent)
+		public Menu(List<MenuItem> _menu, List<MenuItem> _parent)
 		{
 			menu = _menu;
 			parent = _parent;
 		}
 
-		public void addItemMenu(ItemMenu itemMenu)
+		public void addItemMenu(MenuItem itemMenu)
 		{
 			menu.Add (itemMenu);
 		}
-
-		public void show()
+	
+		public void Init(string shcemeFile)
+		{
+			
+		}
+		
+		public void Show()
 		{
 			foreach (var item in menu) {
 				Console.WriteLine ("{0} - {1}", item.number, item.description.Replace("і", "i"));
@@ -46,20 +51,35 @@ namespace BlindLibrary
 				}
 			}
 		}
+		
+		public List<MenuItem> GoToChild(MenuItem item)
+		{
+			return new List<MenuItem>();
+		}
+		
+		public void Clear()
+		{
+			
+		}
+	
+		public void Execute(MenuItem item)
+		{
+			
+		}
 	}
 
-	public class ItemMenu
+	public class MenuItem
 	{
 		public char number;
 		public string description;
 		public string fileAudio;
 		public Menu subMenu;
 
-		public ItemMenu()
+		public MenuItem()
 		{
 		}
 
-		public ItemMenu(char _number, string _description, string _fileAudio)
+		public MenuItem(char _number, string _description, string _fileAudio)
 		{
 			number = _number;
 			description = _description;
