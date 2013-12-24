@@ -36,6 +36,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="LibUsbDotNet">
+      <HintPath>..\blindListener\BlindLibrary\libs\LibUsbDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
