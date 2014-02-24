@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="drive/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="drive/AssemblyInfo.cs">
     <Files>
-      <File FileName="drive/Main.cs" Line="24" Column="10" />
-      <File FileName="drive/DrivesDetector.cs" Line="27" Column="12" />
+      <File FileName="drive/Main.cs" Line="34" Column="70" />
+      <File FileName="drive/DrivesDetector.cs" Line="42" Column="25" />
+      <File FileName="drive/ContentManager.cs" Line="9" Column="29" />
+      <File FileName="drive/AssemblyInfo.cs" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
