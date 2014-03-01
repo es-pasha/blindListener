@@ -3,5 +3,4 @@
 	<SoundStartCopy>/var/tmp/1.mp3</SoundStartCopy>
 	<SoundFinishCopy>/var/tmp/1.mp3</SoundFinishCopy>
 	<SoundLowSize>/var/tmp/1.mp3</SoundLowSize>
-	<SoundContinue>/var/tmp/1.mp3</SoundContinue>
 </Settings>

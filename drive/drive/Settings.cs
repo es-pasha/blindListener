@@ -5,10 +5,11 @@ namespace drive
 {
 	public class Settings
 	{
-		public string CONTENT_PATH = "/var/Data/";
+		public string CONTENT_PATH = "";
 		public string SOUND_START_COPY = "";
 		public string SOUND_FINISH_COPY = "";
 		public string SOUND_LOW_SIZE = "";
+		public string SOUND_CONTINUE = "";
 		
 		public Settings (string path = "config.xml")
 		{
@@ -38,7 +39,12 @@ namespace drive
 							reader.Read();
 							SOUND_LOW_SIZE = reader.Value;
 							break;							
-						}							
+						}
+						case "SoundContinue":{
+							reader.Read();
+							SOUND_CONTINUE = reader.Value;
+							break;							
+						}						
 					}
 				}
 			}
