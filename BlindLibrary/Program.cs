@@ -1,58 +1,66 @@
 using System;
 using System.IO;
 using System.Media;
+using System.Threading;
+using LibUsbDotNet;
+using LibUsbDotNet.Main;
+using LibUsbDotNet.DeviceNotify;
 
 namespace BlindLibrary
 {
 	class MainClass
 	{
 		public static Menu mainMenu = new Menu ();
-
+		public static UsbDeviceFinder MyUsbFinder;
+		public static IDeviceNotifier UsbDeviceNotifier;
+		
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Старт программы, версия 0.01");
-			prepareMenu ();
-			while (1 == 1) {
-				mainMenu.show ();
-
-				var command = Console.ReadKey().KeyChar;
-
-				foreach (var im in mainMenu.menu) {
-					if (command == im.number) {
-						mainMenu = im.subMenu;
-						continue;
-					}
+			//Find your vendor id etc by listing all available USB devices
+			MyUsbFinder = new UsbDeviceFinder(0x2341, 0x0001);
+			UsbDeviceNotifier = DeviceNotifier.OpenDeviceNotifier();
+			
+			
+			/*
+			Menu menu = new Menu();
+			menu.Init("input.txt");		
+			while(true)
+			{
+				menu.Show();
+				var key = Console.ReadKey().KeyChar - 48;
+				
+				if (key == 0)
+				{
+					menu.GoToParent();
 				}
-
-				if (command == '0')
-					return;
-
-				Console.WriteLine ();
+				else
+				{
+					menu.Execute(key);
+				}
+				menu.Clear();
 			}
+			*/
+			Console.ReadKey();
 		}
+	
+		public UsbDevice MyUsbDevice;
 
-		public static void prepareMenu()
+
+		private void OnDeviceNotifyEvent(object sender, DeviceNotifyEventArgs e)
 		{
-			var m1 = new ItemMenu ('1', "Загрузити новий випуск", "1.wav");
-			mainMenu.addItemMenu(m1);
-
-			var m11 = new ItemMenu ('1', "Загрузити всі нові випуски", "11.wav");
-			var m12 = new ItemMenu ('2', "Вибрати нові випуски для загрузки", "12.wav");
-			var m13 = new ItemMenu ('3', "Назад", "12.wav");
-			var menu1 = new Menu (new System.Collections.Generic.List<ItemMenu> (){ m11, m12, m13 }, mainMenu.menu);
-			m1.subMenu = menu1;
-
-			var m2 = new ItemMenu ('2', "Видалити старі випуски", "2.wav");
-			mainMenu.addItemMenu(m2);
-
-			var m3 = new ItemMenu ('3', "Обране", "3.wav");
-			mainMenu.addItemMenu(m3);
-
-			var m4 = new ItemMenu ('4', "Вільне місце", "4.wav");
-			mainMenu.addItemMenu(m4);
-
-			var m0 = new ItemMenu ('0', "Вихід", "0.wav");
-			mainMenu.addItemMenu(m0);
+		    if (e.Object.ToString().Split('\n')[1].Contains("0x2341"))
+		    {
+		        if (e.EventType == EventType.DeviceArrival)
+		        {
+		            //Connect();
+					Console.WriteLine("Connect!");
+		        }
+		        else if(e.EventType == EventType.DeviceRemoveComplete)
+		        {
+		            //ResetConnection();
+					Console.WriteLine("Disconnect!");
+		        }
+		    }
 		}
 	}
 }

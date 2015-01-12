@@ -1,0 +1,6 @@
+<Settings>
+	<ContentPath>/var/Data/</ContentPath>
+	<SoundStartCopy>/var/Data/1.mp3</SoundStartCopy>
+	<SoundFinishCopy>/var/Data/1.mp3</SoundFinishCopy>
+	<SoundLowSize>/var/Data/1.mp3</SoundLowSize>
+</Settings>
