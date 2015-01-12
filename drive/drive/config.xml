@@ -1,7 +1,7 @@
 <Settings>
-	<ContentPath>/var/folder/</ContentPath>
-	<SoundStartCopy>/var/tmp/1.mp3</SoundStartCopy>
-	<SoundFinishCopy>/var/tmp/1.mp3</SoundFinishCopy>
-	<SoundLowSize>/var/tmp/1.mp3</SoundLowSize>
-	<SoundContinue>/var/tmp/1.mp3</SoundContinue>
+  <ContentPath>BlindListenerData</ContentPath>
+  <SoundStartCopy>Sounds/StartLoadData.wav</SoundStartCopy>
+  <SoundFinishCopy>Sounds/LoadDataFinished.wav</SoundFinishCopy>
+  <SoundLowSize>Sounds/NotEnoughSpace.wav</SoundLowSize>
+  <SoundContinue>Sounds/LoadDataContinues.wav</SoundContinue>
 </Settings>

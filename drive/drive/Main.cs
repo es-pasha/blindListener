@@ -21,7 +21,7 @@ namespace drive
 			
 			_detector = new DrivesDetector();
 			_manager = new ContentManager(settings.CONTENT_PATH);
-
+				
 			_timer = new Timer();
 			_timer.Interval = 500;
 			_timer.Elapsed += Handle_timerElapsed;

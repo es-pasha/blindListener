@@ -1,21 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="drive\Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="drive/AssemblyInfo.cs">
     <Files>
-      <File FileName="drive\Main.cs" Line="44" Column="1" />
-      <File FileName="drive\DrivesDetector.cs" Line="34" Column="1" />
-      <File FileName="drive\ContentManager.cs" Line="1" Column="1" />
-      <File FileName="drive\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="drive/Main.cs" Line="34" Column="70" />
+      <File FileName="drive/DrivesDetector.cs" Line="42" Column="25" />
+      <File FileName="drive/ContentManager.cs" Line="9" Column="29" />
+      <File FileName="drive/AssemblyInfo.cs" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/home/vanya/drive/drive/Main.cs" line="27" column="1" />
-      <Breakpoint file="C:\Users\pasha\Documents\blindListener\drive\drive\Main.cs" line="42" column="1" />
-      <Breakpoint file="C:\Users\pasha\Documents\blindListener\drive\drive\DrivesDetector.cs" line="21" column="1" />
+      <Breakpoint file="/home/vanya/drive/drive/Main.cs" line="27" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="drive\DrivesDetector.cs" line="47" offsetX="273" offsetY="782" expression="temp_drives" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
