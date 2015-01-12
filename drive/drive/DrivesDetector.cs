@@ -37,12 +37,18 @@ namespace drive
 		{
 			var temp_drives = new List<DriveInfo>();
 			
-			foreach(var d in DriveInfo.GetDrives()){
-				if (d.DriveFormat.Contains("fat") || d.DriveFormat.Contains("ntfs") || d.DriveFormat.Contains("fuseblk")) {
-					temp_drives.Add(d);
+			foreach (var d in DriveInfo.GetDrives()) {
+				if (d.IsReady) {
+					if (d.DriveType == DriveType.Removable 
+						&& (d.DriveFormat.ToLower ().Contains ("fat") 
+							|| d.DriveFormat.ToLower ().Contains ("ntfs") 
+							|| d.DriveFormat.ToLower ().Contains ("fuseblk"))) {
+						temp_drives.Add (d);
+					}
 				}
 			}
-			
+
+			temp_drives.Reverse ();
 			return temp_drives;
 		}
 		
